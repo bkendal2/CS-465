@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Boston",
+    "image": "reef1.jpg",
+    "destination": "Boston, MA",
+    "description": "Explore historic Boston and walk the Freedom Trail."
+  },
+  {
+    "name": "Chicago",
+    "image": "suite.jpg",
+    "destination": "Chicago, IL",
+    "description": "Experience architecture, food, and nightlife in Chicago."
+  },
+  {
+    "name": "Hawaii",
+    "image": "reef2.jpg",
+    "destination": "Hawaii",
+    "description": "Relax on tropical beaches and enjoy island adventures."
+  }
+]
