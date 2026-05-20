@@ -9,5 +9,9 @@ module.exports = {
 
   contact: (req, res) => {
     res.render('contact', { title: 'Contact Travlr Getaways' });
-  }
+  }, 
+
+  travel: (req, res) => {
+  res.render('travel', { title: 'Travel' });
+}
 };
