@@ -1,20 +1,32 @@
 [
   {
+    "code": "BOS001",
     "name": "Boston",
+    "length": "3 nights / 4 days",
+    "start": "2026-06-01T00:00:00.000Z",
+    "resort": "Boston Harbor Hotel",
+    "perPerson": "$799",
     "image": "reef1.jpg",
-    "destination": "Boston, MA",
     "description": "Explore historic Boston and walk the Freedom Trail."
   },
   {
+    "code": "CHI002",
     "name": "Chicago",
+    "length": "4 nights / 5 days",
+    "start": "2026-07-15T00:00:00.000Z",
+    "resort": "The Langham Chicago",
+    "perPerson": "$899",
     "image": "suite.jpg",
-    "destination": "Chicago, IL",
     "description": "Experience architecture, food, and nightlife in Chicago."
   },
   {
+    "code": "HAW003",
     "name": "Hawaii",
+    "length": "6 nights / 7 days",
+    "start": "2026-08-10T00:00:00.000Z",
+    "resort": "Waikiki Beach Resort",
+    "perPerson": "$1299",
     "image": "reef2.jpg",
-    "destination": "Hawaii",
     "description": "Relax on tropical beaches and enjoy island adventures."
   }
 ]

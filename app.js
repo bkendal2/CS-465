@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const hbs = require('express-handlebars');
+require('./app_server/models/db');
 
 const app = express();
 const port = 3000;

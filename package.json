@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "start": "node app.js"
-},
+    "start": "node app.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bkendal2/CS-465.git"
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/bkendal2/CS-465#readme",
   "dependencies": {
     "express": "^5.2.1",
-    "express-handlebars": "^9.0.1"
+    "express-handlebars": "^9.0.1",
+    "mongoose": "^9.6.3"
   }
 }
