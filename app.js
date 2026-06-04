@@ -1,7 +1,9 @@
 const express = require('express');
 const path = require('path');
 const hbs = require('express-handlebars');
-require('./app_server/models/db');
+require('./app_api/models/db');
+
+const apiRouter = require('./app_api/routes/index');
 
 const app = express();
 const port = 3000;
@@ -22,6 +24,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 // ===== Routes =====
 const indexRouter = require('./app_server/routes/index');
 app.use('/', indexRouter);
+// app.use('/users', usersRouter);
+app.use('/api', apiRouter);
 
 // ===== Start server =====
 app.listen(port, () => {

@@ -6,10 +6,12 @@
   {{#each trips}}
     <div class="col-md-4">
       <div class="card mb-4">
-        <img src="/images/{{image}}" alt="{{name}}">
+        <a href="/api/trips/{{code}}">
+           <img src="/images/{{image}}" alt="{{name}}">
+        </a>
         <div class="card-body">
           <h5>{{name}}</h5>
-          <p>{{destination}}</p>
+          <p>{{resort}}</p>
           <p>{{description}}</p>
         </div>
       </div>

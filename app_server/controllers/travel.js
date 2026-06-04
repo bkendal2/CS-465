@@ -1,27 +1,21 @@
-const trips = require('../data/trips.json');
+const tripsEndpoint = 'http://localhost:3000/api/trips';
 
-const index = (req, res) => {
-    res.render('index', { title: 'Travlr Getaways' });
+const options = {
+  method: 'GET',
+  headers: {
+    'Accept': 'application/json'
+  }
 };
 
-const about = (req, res) => {
-    res.render('about', { title: 'About Travlr Getaways' });
-};
-
-const contact = (req, res) => {
-    res.render('contact', { title: 'Contact Travlr Getaways' });
-};
-
-const travel = (req, res) => {
-    res.render('travel', {
-        title: 'Travlr Getaways',
-        trips
-    });
+const travel = async function (req, res, next) {
+  await fetch(tripsEndpoint, options)
+    .then(res => res.json())
+    .then(json => {
+      res.render('travel', { title: 'Travlr Getaways', trips: json });
+    })
+    .catch(err => res.status(500).send(err.message));
 };
 
 module.exports = {
-    index,
-    about,
-    contact,
-    travel
+  travel
 };
