@@ -1,22 +1,24 @@
 {{> header}}
 
-<h1>{{title}}</h1>
-
-<div class="row">
-  {{#each trips}}
-    <div class="col-md-4">
-      <div class="card mb-4">
-        <a href="/api/trips/{{code}}">
-           <img src="/images/{{image}}" alt="{{name}}">
-        </a>
-        <div class="card-body">
-          <h5>{{name}}</h5>
-          <p>{{resort}}</p>
-          <p>{{description}}</p>
-        </div>
+<div id="contents">
+  <div class="box">
+    <div>
+      <div class="body">
+        <h1>Travel</h1>
+        <ul id="sites">
+          {{#each trips}}
+            <li>
+              <a href="/api/trips/{{code}}">
+                <img src="/images/{{image}}" alt="{{name}}">
+              </a>
+              <h2>{{name}}</h2>
+              <p>{{description}}</p>
+            </li>
+          {{/each}}
+        </ul>
       </div>
     </div>
-  {{/each}}
+  </div>
 </div>
 
 {{> footer}}

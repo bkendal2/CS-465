@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node ./bin/www"
   },
   "repository": {
     "type": "git",
@@ -19,8 +19,13 @@
   },
   "homepage": "https://github.com/bkendal2/CS-465#readme",
   "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "debug": "^4.4.3",
     "express": "^5.2.1",
     "express-handlebars": "^9.0.1",
-    "mongoose": "^9.6.3"
+    "hbs": "^4.2.1",
+    "http-errors": "^2.0.1",
+    "mongoose": "^9.6.3",
+    "morgan": "^1.11.0"
   }
 }
