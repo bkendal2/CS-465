@@ -1,0 +1,12 @@
+<div>
+  <a class="btn btn-info" routerLink="/add-trip">Add Trip</a>
+</div>
+
+<p>{{ message }}</p>
+<p>Trips count: {{ trips.length }}</p>
+
+<div class="row">
+  <div *ngFor="let trip of trips" class="col-md-4 mb-3">
+    <app-trip-card [trip]="trip" class="card-deck mt-2"></app-trip-card>
+  </div>
+</div>
