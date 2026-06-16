@@ -1,0 +1,31 @@
+{
+  "name": "cs-465",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bkendal2/CS-465.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/bkendal2/CS-465/issues"
+  },
+  "homepage": "https://github.com/bkendal2/CS-465#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "debug": "^4.4.3",
+    "express": "^5.2.1",
+    "express-handlebars": "^9.0.1",
+    "hbs": "^4.2.1",
+    "http-errors": "^2.0.1",
+    "mongoose": "^9.6.3",
+    "morgan": "^1.11.0"
+  }
+}
