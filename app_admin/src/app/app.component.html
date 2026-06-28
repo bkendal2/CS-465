@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand navbar-light bg-light mb-3 px-3">
+  <a class="navbar-brand" routerLink="/">
+    <img src="assets/images/logo.png" alt="Travlr Getaways" style="height: 55px;">
+  </a>
+
+  <a class="nav-link" routerLink="/">Trips</a>
+
+  <a
+    *ngIf="!authenticationService.isLoggedIn()"
+    class="nav-link ms-3"
+    routerLink="/login">
+    Login
+  </a>
+
+  <a
+    *ngIf="authenticationService.isLoggedIn()"
+    class="nav-link ms-3"
+    href="#"
+    (click)="logout(); $event.preventDefault()">
+    Logout
+  </a>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

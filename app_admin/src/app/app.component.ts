@@ -1,16 +1,18 @@
 import { Component } from '@angular/core';
-import { RouterLink, Router } from '@angular/router';
+import { RouterOutlet, RouterLink, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { AuthenticationService } from '../services/authentication';
+import { AuthenticationService } from './services/authentication';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'app-root',
   standalone: true,
-  imports: [RouterLink, CommonModule],
-  templateUrl: './navbar.html',
-  styleUrl: './navbar.css'
+  imports: [RouterOutlet, RouterLink, CommonModule],
+  templateUrl: './app.component.html',
+  styleUrl: './app.css'
 })
-export class Navbar {
+export class AppComponent {
+  title = 'Travlr Getaways Admin';
+
   constructor(
     public authenticationService: AuthenticationService,
     private router: Router

@@ -60,21 +60,20 @@ export class EditTrip implements OnInit {
   }
 
   public onSubmit(): void {
-    this.submitted = true;
-    console.log('SAVE BUTTON CLICKED');
+  this.submitted = true;
+  console.log('SAVE BUTTON CLICKED');
+  console.log(this.editForm.value);
 
-    if (this.editForm.valid) {
-      this.tripDataService.updateTrip(this.editForm.value).subscribe({
-        next: (value: any) => {
-          console.log(value);
-          this.router.navigate(['']);
-        },
-        error: (error: any) => {
-          console.log('Error: ' + error);
-        }
-      });
+  this.tripDataService.updateTrip(this.editForm.value).subscribe({
+    next: (value: any) => {
+      console.log(value);
+      this.router.navigate(['']);
+    },
+    error: (error: any) => {
+      console.log('Error: ' + error);
     }
-  }
+  });
+}
 
   get f() {
     return this.editForm.controls;

@@ -1,1 +1,15 @@
-<p>navbar works!</p>
+<nav class="navbar navbar-expand navbar-light bg-light">
+  <a class="navbar-brand" routerLink="/">
+    <img src="assets/images/logo.png" alt="Travlr Getaways" height="40">
+  </a>
+
+  <a class="nav-link" routerLink="/">Trips</a>
+
+  <a *ngIf="!authenticationService.isLoggedIn()" class="nav-link" routerLink="/login">
+    Login
+  </a>
+
+  <a *ngIf="authenticationService.isLoggedIn()" class="nav-link" href="#" (click)="logout()">
+    Logout
+  </a>
+</nav>
