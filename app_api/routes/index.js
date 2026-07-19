@@ -46,7 +46,7 @@ router
 
 router
   .route('/trips/:tripCode')
-  .get(tripsController.tripsFindByCode)
+  .get (tripsController.tripsFindByCode)
   .put(authenticateJWT, tripsController.tripsUpdateTrip);
 
 module.exports = router;

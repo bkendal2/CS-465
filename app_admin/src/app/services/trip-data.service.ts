@@ -32,13 +32,17 @@ export class TripDataService {
     });
   }
 
-  getTrip(tripCode: string): Observable<Trip> {
-    return this.http.get<Trip>(`${this.url}/${tripCode}`);
+  getTrip(tripCode: string): Observable<Trip[]> {
+    return this.http.get<Trip[]>(`${this.url}/${tripCode}`);
   }
 
   updateTrip(formData: Trip): Observable<Trip> {
-    return this.http.put<Trip>(`${this.url}/${formData.code}`, formData, {
-      headers: this.getAuthHeaders()
-    });
+    return this.http.put<Trip>(
+      `${this.url}/${formData.code}`,
+      formData,
+      {
+        headers: this.getAuthHeaders()
+      }
+    );
   }
 }
